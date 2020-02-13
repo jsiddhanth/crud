@@ -1,0 +1,110 @@
+{
+	"inline php": 
+	{
+		"prefix": "sdf",
+		"body": 
+		[
+		  "<?php ${1:echo} $$0 ?>"
+		],
+		"description": "inline php"
+	},
+	  "inline php if": 
+	{
+		"prefix": "sdfif",
+		"body": 
+		[
+		  "<?php if($1): ?>",
+		  "  $2",
+		  "<?php endif; ?>"
+		],
+		"description": "inline php if"
+	},
+	"inline php for": 
+	{
+		"prefix": "sdffor",
+		"body": 
+		[
+		  "<?php foreach($1 as $2): ?>",
+		  "  $3",
+		  "<?php endforeach; ?>"
+		],
+		"description": "inline php foreach"
+	},
+	"base_url": 
+	{
+		"prefix": "sdfb",
+		"body": 
+		[
+		  "<?php echo base_url(); ?>",
+		],
+		"description": "CI base url"
+	},
+	"function": 
+	{
+		"prefix": "sdffunc",
+		"body": 
+		[
+			"public function $1($2)",
+			"{",
+			"    $0",
+			"}"
+		],
+		"description": "CI base url"
+	},
+	"ci data": 
+	{
+		"prefix": "dat",
+		"body": 
+		[
+		  "$$data['$1'] = $2;$0"
+		],
+		"description": "ci data"
+	},
+	"oop this": 
+	{
+		"prefix": "sdft",
+		"body": 
+		[
+		  " $$this->$0"
+		],
+		"description": " this oop"
+	},
+	"ci_in": 
+	{
+		"prefix": "sdfin",
+		"body": 
+		[
+		  "'$1' => \\$this->input->post('$2'),$0"
+		],
+		"description": "ci_input"
+	},
+	"var_d": 
+	{
+		"prefix": "vd",
+		"body": 
+		[
+		  "var_dump($$0);"
+		],
+		"description": "var_dump"
+	},
+	"print_r": 
+	{
+		"prefix": "sdfpr",
+		"body": 
+		[
+		  "print_r($$0);"
+		],
+		"description": "print_r"
+	},
+	"html comment": 
+	{
+		"prefix": "hcom",
+		"body": 
+		[
+		  "<!-- ${1:COMMENT} :START -->",
+		  "<!-- ${1:COMMENT} ./END -->"
+		],
+		"description": "hmtl arrow comment"
+	}
+	  
+}
